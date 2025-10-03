@@ -1,0 +1,151 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : system_top_dft
+Version: K-2015.06
+Date   : Sun Sep 28 04:44:30 2025
+****************************************
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: scan_clk (clock source 'scan_clk')
+  Endpoint: int_clk_div_rx/div_clk_reg_reg
+            (rising edge-triggered flip-flop clocked by scan_clk)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  system_top_dft     tsmc13_wl20           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock scan_clk (fall edge)                             50.00      50.00
+  scan_clk (in)                                           0.00      50.00 f
+  mux_uartclk/IN_1 (mux2X1_6)                             0.00      50.00 f
+  mux_uartclk/U1/Y (AO2B2X4M)                             1.02      51.02 f
+  mux_uartclk/OUT (mux2X1_6)                              0.00      51.02 f
+  int_clk_div_rx/i_ref_clk (int_clk_div_test_0)           0.00      51.02 f
+  int_clk_div_rx/U21/Y (OAI2BB2XLM)                       0.47      51.50 f
+  int_clk_div_rx/U70/Y (NOR2BX2M)                         0.39      51.89 f
+  int_clk_div_rx/U48/Y (OAI2B2X1M)                        0.49      52.38 r
+  int_clk_div_rx/div_clk_reg_reg/D (SDFFRX1M)             0.00      52.38 r
+  data arrival time                                                 52.38
+
+  clock scan_clk (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.20      99.80
+  int_clk_div_rx/div_clk_reg_reg/CK (SDFFRX1M)            0.00      99.80 r
+  library setup time                                     -0.38      99.42
+  data required time                                                99.42
+  --------------------------------------------------------------------------
+  data required time                                                99.42
+  data arrival time                                                -52.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                       47.05
+
+
+  Startpoint: ASYNC_FIFO_inst/fifo_mem_ctrl/mem_reg[7][3]
+              (rising edge-triggered flip-flop clocked by scan_clk)
+  Endpoint: SO[2] (output port clocked by scan_clk)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  system_top_dft     tsmc13_wl20           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock scan_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ASYNC_FIFO_inst/fifo_mem_ctrl/mem_reg[7][3]/CK (SDFFRQX1M)
+                                                          0.00       0.00 r
+  ASYNC_FIFO_inst/fifo_mem_ctrl/mem_reg[7][3]/Q (SDFFRQX1M)
+                                                          0.70       0.70 r
+  ASYNC_FIFO_inst/fifo_mem_ctrl/U2/Y (CLKBUFX2M)          0.29       1.00 r
+  ASYNC_FIFO_inst/fifo_mem_ctrl/test_so1 (fifo_mem_ctrl_fifo_width8_addr_size3_test_1)
+                                                          0.00       1.00 r
+  ASYNC_FIFO_inst/U5/Y (BUFX2M)                           0.75       1.74 r
+  ASYNC_FIFO_inst/test_so1 (ASYNC_FIFO_data_width8_addr_size3_test_1)
+                                                          0.00       1.74 r
+  SO[2] (out)                                             0.00       1.74 r
+  data arrival time                                                  1.74
+
+  clock scan_clk (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.20      99.80
+  output external delay                                 -20.00      79.80
+  data required time                                                79.80
+  --------------------------------------------------------------------------
+  data required time                                                79.80
+  data arrival time                                                 -1.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                       78.06
+
+
+  Startpoint: register8_16_inst/REG_FILE_reg[2][3]
+              (rising edge-triggered flip-flop clocked by scan_clk)
+  Endpoint: int_clk_div_rx/div_clk_reg_reg
+            (rising edge-triggered flip-flop clocked by scan_clk)
+  Path Group: scan_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  system_top_dft     tsmc13_wl20           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock scan_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  register8_16_inst/REG_FILE_reg[2][3]/CK (SDFFRQX2M)     0.00       0.00 r
+  register8_16_inst/REG_FILE_reg[2][3]/Q (SDFFRQX2M)      0.51       0.51 f
+  register8_16_inst/U161/Y (INVXLM)                       0.44       0.95 r
+  register8_16_inst/U162/Y (INVX6M)                       0.56       1.51 f
+  register8_16_inst/REG2[3] (register8_16_addr_width4_MEM_DEPTH16_data_width8_MEM_WIDTH8_test_1)
+                                                          0.00       1.51 f
+  CLK_MUX/Prescale[1] (CLK_MUX)                           0.00       1.51 f
+  CLK_MUX/U16/Y (NOR3X4M)                                 0.84       2.35 r
+  CLK_MUX/U13/Y (AND2X2M)                                 0.92       3.27 r
+  CLK_MUX/div_ratio_rx[1] (CLK_MUX)                       0.00       3.27 r
+  int_clk_div_rx/i_div_ratio[1] (int_clk_div_test_0)      0.00       3.27 r
+  int_clk_div_rx/U5/Y (INVX2M)                            0.61       3.88 f
+  int_clk_div_rx/U71/Y (OR2X1M)                           0.49       4.37 f
+  int_clk_div_rx/U34/S (ADDFX2M)                          0.43       4.81 f
+  int_clk_div_rx/U29/Y (OR2X1M)                           0.63       5.43 f
+  int_clk_div_rx/U81/Y (OR2X1M)                           0.69       6.13 f
+  int_clk_div_rx/U83/Y (OR2X1M)                           0.70       6.82 f
+  int_clk_div_rx/U85/Y (OR2X1M)                           0.70       7.52 f
+  int_clk_div_rx/U87/Y (OR2X1M)                           0.70       8.21 f
+  int_clk_div_rx/U89/Y (OR2X1M)                           0.70       8.91 f
+  int_clk_div_rx/U91/Y (NOR2X1M)                          0.87       9.78 r
+  int_clk_div_rx/U92/Y (AO21XLM)                          0.49      10.27 r
+  int_clk_div_rx/U117/Y (CLKXOR2X2M)                      0.43      10.71 f
+  int_clk_div_rx/U119/Y (NOR4X1M)                         0.71      11.42 r
+  int_clk_div_rx/U56/Y (AO2B2X2M)                         0.37      11.79 r
+  int_clk_div_rx/U55/Y (AND2X2M)                          0.39      12.18 r
+  int_clk_div_rx/U40/Y (AOI2B1X2M)                        0.27      12.45 f
+  int_clk_div_rx/U49/Y (NOR2X2M)                          0.62      13.07 r
+  int_clk_div_rx/U48/Y (OAI2B2X1M)                        0.57      13.64 r
+  int_clk_div_rx/div_clk_reg_reg/D (SDFFRX1M)             0.00      13.64 r
+  data arrival time                                                 13.64
+
+  clock scan_clk (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.20      99.80
+  int_clk_div_rx/div_clk_reg_reg/CK (SDFFRX1M)            0.00      99.80 r
+  library setup time                                     -0.38      99.42
+  data required time                                                99.42
+  --------------------------------------------------------------------------
+  data required time                                                99.42
+  data arrival time                                                -13.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                       85.79
+
+
+1

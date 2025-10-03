@@ -1,0 +1,40 @@
+ 
+****************************************
+Report : clocks
+Design : system_top_dft
+Version: K-2015.06
+Date   : Sun Sep 28 04:44:30 2025
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk1            20.00   {0 10}                        {REF_CLK}
+clk2           271.30   {0 135.65}                    {UART_CLK}
+gated_clk     -         -                   G         {CLK_GATE/GATED_CLK}
+rx_clk        -         -                   G         {int_clk_div_rx/o_div_clk}
+scan_clk       100.00   {0 50}                        {scan_clk}
+tx_clk        -         -                   G         {int_clk_div_tx/o_div_clk}
+--------------------------------------------------------------------------------
+
+Generated     Master         Generated      Master         Waveform
+Clock         Source         Source         Clock          Modification
+--------------------------------------------------------------------------------
+gated_clk     CLK_GATE/CLK   {CLK_GATE/GATED_CLK}
+                                            *              divide_by(1)
+rx_clk        int_clk_div_rx/i_ref_clk
+                             {int_clk_div_rx/o_div_clk}
+                                            *              divide_by(32)
+tx_clk        int_clk_div_tx/i_ref_clk
+                             {int_clk_div_tx/o_div_clk}
+                                            *              divide_by(1)
+--------------------------------------------------------------------------------
+Warning: Some clocks have no period defined.  These clocks will not
+	be considered for timing. (RPT-27)
+1

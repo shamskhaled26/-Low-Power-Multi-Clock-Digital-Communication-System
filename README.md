@@ -56,7 +56,7 @@ The complete ASIC backend flow was performed:
 ---
 
 ## 5. Deliverables
-- RTL source code (`.sv` files)  
+- RTL source code (`.v` files)  
 - Testbenches for verification  
 - Synthesized netlist  
 - Scan-inserted netlist  

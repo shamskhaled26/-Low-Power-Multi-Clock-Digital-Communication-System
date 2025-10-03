@@ -1,0 +1,43 @@
+{D:/digital diploma 2025/temsah/assignments/assignment 4.0/arithmetic_unit.v} {1 {vlog -work work -vopt -stats=none {D:/digital diploma 2025/temsah/assignments/assignment 4.0/arithmetic_unit.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module arithmetic_unit
+
+Top level modules:
+	arithmetic_unit
+
+} {} {}} {D:/digital diploma 2025/temsah/assignments/assignment 4.0/logic_unit.v} {1 {vlog -work work -vopt -stats=none {D:/digital diploma 2025/temsah/assignments/assignment 4.0/logic_unit.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module logic_unit
+
+Top level modules:
+	logic_unit
+
+} {} {}} {D:/digital diploma 2025/temsah/assignments/assignment 4.0/shift_unit.v} {1 {vlog -work work -vopt -stats=none {D:/digital diploma 2025/temsah/assignments/assignment 4.0/shift_unit.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module SHIFT_unit
+
+Top level modules:
+	SHIFT_unit
+
+} {} {}} {D:/digital diploma 2025/temsah/assignments/assignment 4.0/decoder.v} {1 {vlog -work work -vopt -stats=none {D:/digital diploma 2025/temsah/assignments/assignment 4.0/decoder.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module decoder
+
+Top level modules:
+	decoder
+
+} {} {}} {D:/digital diploma 2025/temsah/assignments/assignment 4.0/cmp_unit.v} {1 {vlog -work work -vopt -stats=none {D:/digital diploma 2025/temsah/assignments/assignment 4.0/cmp_unit.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module cmp_unit
+
+Top level modules:
+	cmp_unit
+
+} {} {}} {D:/digital diploma 2025/temsah/assignments/assignment 4.0/ALU_TOP.v} {1 {vlog -work work -vopt -stats=none {D:/digital diploma 2025/temsah/assignments/assignment 4.0/ALU_TOP.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module ALU_TOP
+
+Top level modules:
+	ALU_TOP
+
+} {} {}}
